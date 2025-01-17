@@ -6,7 +6,7 @@ public class PLayerMove : MonoBehaviour
 
 {
     [SerializeField] private float _speed;
-    [SerializeField] private float _rotateSpeed;
+    [SerializeField] private float _rotate;
     void Start()
     {
 
@@ -24,12 +24,13 @@ public class PLayerMove : MonoBehaviour
 
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position -= transform.right * _rotateSpeed * Time.deltaTime;
+            transform.Rotate(0, - _rotate * Time.deltaTime, 0);
+
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += transform.right * _rotateSpeed * Time.deltaTime;
+            transform.Rotate(0, _rotate * Time.deltaTime, 0);
        
         }
     }
