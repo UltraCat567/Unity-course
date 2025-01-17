@@ -18,7 +18,9 @@ public class PLayerMove : MonoBehaviour
         if (Input.GetKey(KeyCode.W))
         {
 
-            transform.position += transform.forward * _speed * Time.deltaTime;
+            Vector3 newPosition = transform.position + transform.forward * _speed * Time.deltaTime;
+            newPosition.x = Mathf.Clamp(newPosition.x, -2.7f, 2.7f);
+            transform.position = newPosition;
 
         }
 
