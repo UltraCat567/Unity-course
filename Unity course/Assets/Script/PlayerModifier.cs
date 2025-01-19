@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -41,11 +42,57 @@ public class PlayerModifier : MonoBehaviour
     public void AddWidth(int value)
     {
         _wigth += value;
-        _renderer.material.SetFloat("_PushValue", _wigth * _widthMuitiplier);
+        UpdateWidth();  
     }
 
     public void AddHeight(int value)
     {
         _height += value;
     }
+
+    internal void AddHeigth(int value)
+    {
+        throw new NotImplementedException();
+    }
+
+    internal void AddHegth(int value)
+    {
+        throw new NotImplementedException();
+    }
+
+    public void HitBarrier()
+    {
+        if(_height > 0)
+        {
+            _height -= 50;
+
+        }
+        else if (_wigth > 0)
+        {
+            _wigth -= 50;
+            UpdateWidth();
+
+        }
+        else
+        {
+            Die();
+        }
+    } 
+
+    void UpdateWidth()
+    {
+        _renderer.material.SetFloat("_PushValue", _wigth * _widthMuitiplier);
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
+
+    }
+        
+           
+
+        
+    
+
 }
