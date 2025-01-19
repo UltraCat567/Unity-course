@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -18,10 +19,6 @@ public class GateAppearaence : MonoBehaviour
     [SerializeField] Color _colorPositive;
     [SerializeField] Color _colorNegative;
 
-    [SerializeField] int _value;
-
-    [SerializeField] DeformationType _deformationType;
-
     //»конки ширины
     [SerializeField] GameObject _expandLable;
     [SerializeField] GameObject _shrinkLable;
@@ -30,16 +27,16 @@ public class GateAppearaence : MonoBehaviour
     [SerializeField] GameObject _downLable;
 
 
-    private void OnValidate()
+    public void PykPyk(DeformationType deformationType, int value)
     {
         string prefix = "";
 
-        _text.text = _value.ToString();
-        if (_value > 0)
+        _text.text = value.ToString();
+        if (value > 0)
         {
             prefix = "+";
             SetColor(_colorPositive);
-        }else if (_value == 0)
+        }else if (value == 0)
         {
             SetColor(Color.grey);
         }
@@ -48,16 +45,16 @@ public class GateAppearaence : MonoBehaviour
             SetColor(_colorNegative);
 
         }
-        _text.text = prefix + _value.ToString();
+        _text.text = prefix + value.ToString();
 
         _expandLable.SetActive(false);
         _shrinkLable.SetActive(false);
         _upLable.SetActive(false);
         _downLable.SetActive(false);
 
-        if (_deformationType == DeformationType.Wight)
+        if ( deformationType == DeformationType.Wight)
         {
-            if (_value >0)
+            if (value >0)
             {
                 _expandLable.SetActive(true);
             }
@@ -67,9 +64,9 @@ public class GateAppearaence : MonoBehaviour
             }
 
         }
-        else if (_deformationType == DeformationType.Height)
+        else if (deformationType == DeformationType.Height)
         {
-            if (_value > 0)
+            if (value > 0)
             {
                 _upLable.SetActive(true);
             }
@@ -79,6 +76,12 @@ public class GateAppearaence : MonoBehaviour
             }
         }
     }
+
+    internal void UpdateVisual(DeformationType deformationType, int value)
+    {
+        throw new NotImplementedException();
+    }
+
     void SetColor(Color color)
     {
         _topImage.color = color;
