@@ -8,6 +8,7 @@ public class PLayerMove : MonoBehaviour
     [SerializeField] private float _speed;
     [SerializeField] private float _rotate;
     [SerializeField] private Animator _animator;
+    [SerializeField] float _eulerY;
 
 
     // Update is called once per frame
@@ -21,6 +22,8 @@ public class PLayerMove : MonoBehaviour
             transform.position = newPosition;
 
             _animator.SetBool("Run", true);
+
+            _eulerY = Mathf.Clamp(_eulerY, -70, 70);
 
         }
 
