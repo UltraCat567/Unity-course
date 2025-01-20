@@ -190,6 +190,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03477f0f37dec604cb0b2550153efb0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bricksEffectPrefab: {fileID: 4024341608224111009, guid: bb3dcb0867e83e041be519f7ca373c23,
+    type: 3}
+  _boom: {fileID: 2323707659804188222, guid: 4b80339f36d4f314c84e2b44226a5ee0, type: 3}
 --- !u!1 &5945052354266312028
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,6 +311,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03477f0f37dec604cb0b2550153efb0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bricksEffectPrefab: {fileID: 4024341608224111009, guid: bb3dcb0867e83e041be519f7ca373c23,
+    type: 3}
+  _boom: {fileID: 2323707659804188222, guid: 4b80339f36d4f314c84e2b44226a5ee0, type: 3}
 --- !u!1 &6087835582685165980
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +433,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03477f0f37dec604cb0b2550153efb0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bricksEffectPrefab: {fileID: 4024341608224111009, guid: bb3dcb0867e83e041be519f7ca373c23,
+    type: 3}
+  _boom: {fileID: 2323707659804188222, guid: 4b80339f36d4f314c84e2b44226a5ee0, type: 3}
 --- !u!1 &6245096724777726793
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +554,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03477f0f37dec604cb0b2550153efb0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bricksEffectPrefab: {fileID: 4024341608224111009, guid: bb3dcb0867e83e041be519f7ca373c23,
+    type: 3}
+  _boom: {fileID: 2323707659804188222, guid: 4b80339f36d4f314c84e2b44226a5ee0, type: 3}
 --- !u!1 &7527968618370018106
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +793,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03477f0f37dec604cb0b2550153efb0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _bricksEffectPrefab: {fileID: 4024341608224111009, guid: bb3dcb0867e83e041be519f7ca373c23,
+    type: 3}
+  _boom: {fileID: 2323707659804188222, guid: 4b80339f36d4f314c84e2b44226a5ee0, type: 3}
 --- !u!1 &8634336312809692112
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +824,7 @@ Transform:
   m_GameObject: {fileID: 8634336312809692112}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.793396, y: 6.1320314, z: 14.439995}
+  m_LocalPosition: {x: 8.793396, y: 6.1320314, z: 16.96}
   m_LocalScale: {x: 6.7633, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

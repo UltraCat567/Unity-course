@@ -5,6 +5,7 @@ using UnityEngine;
 public class Coin : MonoBehaviour
 {
     [SerializeField] float _rotationsSpeed;
+    [SerializeField] GameObject _ice;
  
 
     // Update is called once per frame
@@ -16,6 +17,7 @@ public class Coin : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         FindObjectOfType<CoinManager>().AddOne();
-        Destroy(gameObject); 
+        Destroy(gameObject);
+        Instantiate(_ice, transform.position, transform.rotation);
     }
 }

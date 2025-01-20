@@ -10,6 +10,7 @@ public class FinishTrigger : MonoBehaviour
         if (playerBehaviour)
         {
             playerBehaviour.StartFinishBehavior();
+            FindObjectOfType<GameManager>().ShowFinishWindow();
 
         }
        

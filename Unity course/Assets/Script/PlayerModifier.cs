@@ -14,6 +14,8 @@ public class PlayerModifier : MonoBehaviour
     [SerializeField] Transform _bottomSpine;
 
     [SerializeField] Transform _colliderTransform;
+
+    [SerializeField] AudioSource _audioSource;
    
 
 
@@ -42,12 +44,20 @@ public class PlayerModifier : MonoBehaviour
     public void AddWidth(int value)
     {
         _wigth += value;
-        UpdateWidth();  
+        UpdateWidth(); 
+        if(value > 0)
+        {
+            _audioSource.Play();
+        }
     }
 
     public void AddHeight(int value)
     {
         _height += value;
+        if (value > 0)
+        {
+            _audioSource.Play();
+        }
     }
 
     internal void AddHeigth(int value)
@@ -86,6 +96,7 @@ public class PlayerModifier : MonoBehaviour
 
     void Die()
     {
+        FindObjectOfType<GameManager>().ShowFinishWindow();
         Destroy(gameObject);
 
     }
